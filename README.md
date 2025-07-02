@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radiat Glow Beauty Bar - Your Destination for Beauty</title>
+    <title>Phindy P Beauty Bar - Your Destination for Beauty</title>
     <!-- Tailwind CSS CDN for easy styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for 'Inter' and 'Dancing Script' (for cursive effect) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Custom styles to enhance Tailwind, especially for rounded corners and overall aesthetic */
         body {
@@ -30,6 +31,12 @@
         .bg-cream-50 { background-color: #FFFDF9; } /* Very light cream */
         .text-cream-50 { color: #FFFDF9; }
 
+        /* Custom style for the cursive company name */
+        .font-cursive {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700; /* Make it bold for better visibility */
+        }
+
         /* Smooth scrolling for anchor links */
         html {
             scroll-behavior: smooth;
@@ -40,15 +47,19 @@
 
     <!-- Header Section -->
     <header class="bg-white shadow-sm py-4 fixed w-full z-10 top-0 rounded-b-lg-custom">
-        <div class="container flex justify-between items-center">
-            <!-- Logo - Updated with your specified logo image -->
-            <a href="index.html" class="flex items-center space-x-2">
-                <img src="WhatsApp_Image_2025-06-30_at_02.13.10_4a3d395a-removebg-preview (1).png" alt="Radiant Glow Logo" class="h-10 w-auto">
-                <span class="text-xl font-bold text-rose-gold">PHINDY P Beauty BAR</span>
+        <div class="container relative flex justify-between items-center">
+            <!-- Logo - Image only, links to home -->
+            <a href="index.html" class="flex items-center z-20">
+                <img src="WhatsApp_Image_2025-06-30_at_02.13.10_4a3d395a-removebg-preview (1).png" alt="Phindy P Beauty Bar Logo" class="h-10 w-auto">
             </a>
 
-            <!-- Navigation Menu -->
-            <nav class="hidden md:flex space-x-6">
+            <!-- Company Name - Centered for all screen sizes -->
+            <div class="absolute inset-x-0 text-center z-10">
+                <span class="text-3xl font-bold text-rose-gold font-cursive">Phindy P</span>
+            </div>
+
+            <!-- Navigation Menu - Desktop only -->
+            <nav class="hidden md:flex space-x-6 z-20">
                 <a href="#hero" class="text-gray-600 hover:text-rose-gold transition duration-300">Home</a>
                 <a href="#services" class="text-gray-600 hover:text-rose-gold transition duration-300">Services</a>
                 <a href="#about" class="text-gray-600 hover:text-rose-gold transition duration-300">About Us</a>
@@ -58,7 +69,7 @@
             </nav>
 
             <!-- Mobile Menu Button (Hamburger) -->
-            <div class="md:hidden">
+            <div class="md:hidden z-20">
                 <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -74,6 +85,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
+            <!-- Company Name for Mobile Menu - Now only "Phindy P" -->
+            <div class="mb-8 text-center">
+                <span class="text-4xl font-bold text-rose-gold font-cursive">Phindy P</span>
+            </div>
             <a href="#hero" class="text-gray-800 text-2xl hover:text-rose-gold transition duration-300" onclick="closeMobileMenu()">Home</a>
             <a href="#services" class="text-gray-800 text-2xl hover:text-rose-gold transition duration-300" onclick="closeMobileMenu()">Services</a>
             <a href="#about" class="text-gray-800 text-2xl hover:text-rose-gold transition duration-300" onclick="closeMobileMenu()">About Us</a>
@@ -98,7 +113,7 @@
                     Experience Unparalleled Beauty & Relaxation
                 </h1>
                 <p class="text-lg sm:text-xl mb-8 drop-shadow-sm">
-                    Your journey to radiant beauty and blissful pampering begins here at Radiant Glow.
+                    Your journey to radiant beauty and blissful pampering begins here at Phindy P Beauty Bar.
                 </p>
                 <a href="#book-now" class="inline-block bg-rose-gold text-white text-lg px-8 py-4 rounded-full hover:bg-blush-pink transition duration-300 shadow-xl transform hover:scale-105">
                     Book Your Transformation Today
@@ -109,9 +124,9 @@
         <!-- About Us Section (Brief Introduction) -->
         <section id="about" class="py-16 md:py-24 bg-white container rounded-lg-custom mt-8 shadow-md">
             <div class="max-w-4xl mx-auto text-center px-4">
-                <h2 class="text-3xl sm:text-4xl font-bold text-rose-gold mb-6">Welcome to Radiant Glow</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-rose-gold mb-6">Welcome to Phindy P Beauty Bar</h2>
                 <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                    At Radiant Glow Beauty Bar, we believe in enhancing your natural beauty and providing a serene escape from the everyday hustle. Our expert team is dedicated to delivering personalized services that leave you feeling refreshed, confident, and utterly radiant. From luxurious manicures to rejuvenating facials, discover a world where beauty meets tranquility.
+                    At Phindy P Beauty Bar, we believe in enhancing your natural beauty and providing a serene escape from the everyday hustle. Our expert team is dedicated to delivering personalized services that leave you feeling refreshed, confident, and utterly radiant. From luxurious manicures to rejuvenating facials, discover a world where beauty meets tranquility.
                 </p>
                 <a href="#services" class="text-rose-gold hover:underline font-medium text-lg">Explore Our Services &rarr;</a>
             </div>
@@ -122,9 +137,9 @@
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Our Signature Services</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1: Nails -->
+                    <!-- Service Card 1: Nails - Updated with your specified image -->
                     <div class="bg-white p-6 rounded-lg-custom shadow-lg text-center transform hover:scale-105 transition duration-300">
-                        <img src="https://placehold.co/100x100/B76E79/FFF?text=💅" alt="Nail Services Icon" class="mx-auto mb-4 w-24 h-24 object-contain rounded-full">
+                        <img src="pink-glitter-nail-designs-18-360x480.jpg" alt="Pink Glitter Nail Designs" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
                         <h3 class="text-xl font-semibold text-rose-gold mb-3">Nail Perfection</h3>
                         <p class="text-gray-600 mb-4">
                             From classic manicures to intricate nail art, let us pamper your hands and feet.
@@ -166,14 +181,14 @@
                     <!-- Testimonial 1 -->
                     <div class="bg-light-grey p-6 rounded-lg-custom shadow-inner">
                         <p class="italic text-gray-700 mb-4">
-                            "Radiant Glow is my go-to for everything beauty! The staff are incredibly talented and make you feel so comfortable. My nails have never looked better!"
+                            "Phindy P Beauty Bar is my go-to for everything beauty! The staff are incredibly talented and make you feel so comfortable. My nails have never looked better!"
                         </p>
                         <p class="font-semibold text-rose-gold">- Sarah J.</p>
                     </div>
                     <!-- Testimonial 2 -->
                     <div class="bg-light-grey p-6 rounded-lg-custom shadow-inner">
                         <p class="italic text-gray-700 mb-4">
-                            "Absolutely loved my facial here. My skin feels amazing and the entire experience was so relaxing. Highly recommend!"
+                            "Absolutely loved my facial here. My skin feels amazing and the entire experience was so relaxing. Highly recommend Phindy P!"
                         </p>
                         <p class="font-semibold text-rose-gold">- Emily R.</p>
                     </div>
@@ -204,8 +219,14 @@
                 <h3 class="text-xl font-bold text-blush-pink mb-4">Contact Us</h3>
                 <p class="mb-2">123 Beauty Blvd, Glamour City, SA 12345</p>
                 <p class="mb-2">Phone: <a href="tel:+27123456789" class="hover:underline">+27 12 345 6789</a></p>
-                <p class="mb-2">Email: <a href="mailto:info@radiantglow.com" class="hover:underline">info@radiantglow.com</a></p>
-                <p>Hours: Mon-Sat: 9AM - 6PM</p>
+                <p class="mb-2">Email: <a href="mailto:info@phindyp.com" class="hover:underline">info@phindyp.com</a></p>
+                <p class="mb-4">Hours: Mon-Sat: 9AM - 6PM</p>
+                <!-- Get Directions Button -->
+                <a href="https://www.google.com/maps/place/26%C2%B033'54.3%22S+29%C2%B004'41.7%22E/@-26.565075,29.078259"
+                    target="_blank"
+                    class="inline-block bg-[#34A853] text-white px-6 py-3 rounded-full hover:bg-blush-pink transition duration-300 shadow-md transform hover:scale-105 font-sans">
+                    📍 Get Directions
+                </a>
             </div>
             <!-- Quick Links -->
             <div>
@@ -241,7 +262,7 @@
             </div>
         </div>
         <div class="text-center mt-8 text-gray-500">
-            <p>&copy; 2025 Radiant Glow Beauty Bar. All rights reserved.</p>
+            <p>&copy; 2025 Phindy P Beauty Bar. All rights reserved.</p>
         </div>
     </footer>
 
@@ -260,7 +281,6 @@
                 closeMobileMenuButton.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
                 });
-
                 // Close mobile menu when a link is clicked
                 mobileMenu.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
