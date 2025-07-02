@@ -222,7 +222,8 @@
                 <p class="mb-2">Email: <a href="mailto:info@phindyp.com" class="hover:underline">info@phindyp.com</a></p>
                 <p class="mb-4">Hours: Mon-Sat: 9AM - 6PM</p>
                 <!-- Get Directions Button -->
-                <a href="https://www.google.com/maps/place/26%C2%B033'54.3%22S+29%C2%B004'41.7%22E/@-26.565075,29.078259"
+                <a href="https://www.google.com/maps?q=-26.565075,29.078259"
+
                     target="_blank"
                     class="inline-block bg-[#34A853] text-white px-6 py-3 rounded-full hover:bg-blush-pink transition duration-300 shadow-md transform hover:scale-105 font-sans">
                     📍 Get Directions
