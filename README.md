@@ -223,9 +223,8 @@
                 <p class="mb-4">Hours: Mon-Sat: 9AM - 6PM</p>
                 <!-- Get Directions Button -->
                 <a href="https://www.google.com/maps?q=-26.565075,29.078259"
-
                     target="_blank"
-                    class="inline-block bg-[#34A853] text-white px-6 py-3 rounded-full hover:bg-blush-pink transition duration-300 shadow-md transform hover:scale-105 font-sans">
+                    class="inline-block bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition duration-300 shadow-md transform hover:scale-105 font-sans">
                     📍 Get Directions
                 </a>
             </div>
@@ -255,7 +254,7 @@
                         </svg>
                     </a>
                     <a href="https://www.facebook.com/yourbeautyfacebook" target="_blank" class="text-white hover:text-blush-pink transition duration-300">
-                        <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8" aria-hidden="true">
+                        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M19.5 0h-15C2.016 0 0 2.016 0 4.5v15C0 21.984 2.016 24 4.5 24h7.5V14.625h-3v-3h3V9.375c0-3.15 1.89-4.89 4.74-4.89h2.36v3h-1.5c-1.395 0-1.65 1.045-1.65 1.705v2.295h3.3l-.45 3h-2.85V24H19.5c2.484 0 4.5-2.016 4.5-4.5v-15C24 2.016 21.984 0 19.5 0Z" clip-rule="evenodd" />
                         </svg>
                     </a>
