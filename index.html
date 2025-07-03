@@ -15,7 +15,9 @@
             @apply bg-cream-50 text-gray-800; /* A soft cream background and dark grey text */
         }
         .container {
-            @apply mx-auto px-4 sm:px-6 lg:px-8;
+            /* This container class is used for inner sections to apply consistent padding */
+            /* Removed horizontal padding as it's now applied to the main wrapper */
+            @apply mx-auto;
         }
         /* General styling for rounded corners on elements */
         .rounded-lg-custom {
@@ -50,6 +52,7 @@
         <div class="container relative flex justify-between items-center">
             <!-- Logo - Image only, links to home -->
             <a href="index.html" class="flex items-center z-20">
+                <!-- Path adjusted to assume image is in the same directory as index.html -->
                 <img src="WhatsApp_Image_2025-06-30_at_02.13.10_4a3d395a-removebg-preview (1).png" alt="Phindy P Beauty Bar Logo" class="h-10 w-auto">
             </a>
 
@@ -59,7 +62,8 @@
             </div>
 
             <!-- Navigation Menu - Desktop only -->
-            <nav class="hidden md:flex space-x-6 z-20">
+            <nav class="hidden md:flex space-x-6 z-20 items-center">
+                <!-- Removed the duplicated logo here -->
                 <a href="#hero" class="text-gray-600 hover:text-rose-gold transition duration-300">Home</a>
                 <a href="#services" class="text-gray-600 hover:text-rose-gold transition duration-300">Services</a>
                 <a href="#about" class="text-gray-600 hover:text-rose-gold transition duration-300">About Us</a>
@@ -98,11 +102,13 @@
         </div>
     </header>
 
-    <main class="pt-20"> <!-- Added padding-top to account for fixed header -->
+    <!-- Main content wrapper for centering the entire page content -->
+    <!-- This div now wraps all content sections below the header -->
+    <!-- Added responsive horizontal padding here for consistent layout -->
+    <div class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 pt-20">
         <!-- Hero Section -->
         <section id="hero" class="relative bg-blush-pink py-12 lg:py-20 flex items-center justify-center text-center rounded-b-xl overflow-hidden shadow-lg">
-            <!-- Removed the absolute inset-0 div as the image itself will be positioned -->
-            <!-- Hero background image - Updated with your specified image and styling -->
+            <!-- Hero background image - Path adjusted to assume image is in the same directory as index.html -->
             <img
                 src="3c2a0ebf-751c-4f6a-a1cb-61d87f4497eb-removebg-preview.png"
                 alt="Elegant Beauty Bar Interior"
@@ -110,7 +116,8 @@
             />
             <div class="relative z-10 text-white p-6 rounded-lg-custom max-w-2xl bg-black bg-opacity-30 backdrop-blur-sm">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 drop-shadow-md">
-                    Experience Unparalleled Beauty & Relaxation
+                    HERE IS WHERE THE MAGIC HAPPENS 🪄
+
                 </h1>
                 <p class="text-lg sm:text-xl mb-8 drop-shadow-sm">
                     Your journey to radiant beauty and blissful pampering begins here at Phindy P Beauty Bar.
@@ -132,46 +139,123 @@
             </div>
         </section>
 
-        <!-- Services Preview Section -->
+        <!-- Services Section - Now includes categories -->
         <section id="services" class="py-16 md:py-24 bg-blush-pink container rounded-lg-custom mt-8 shadow-md">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Our Signature Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1: Nails - Updated with your specified image -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Service Card 1: Nails -->
                     <div class="bg-white p-6 rounded-lg-custom shadow-lg text-center transform hover:scale-105 transition duration-300">
                         <img src="pink-glitter-nail-designs-18-360x480.jpg" alt="Pink Glitter Nail Designs" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
                         <h3 class="text-xl font-semibold text-rose-gold mb-3">Nail Perfection</h3>
                         <p class="text-gray-600 mb-4">
                             From classic manicures to intricate nail art, let us pamper your hands and feet.
                         </p>
-                        <a href="#book-now" class="text-blush-pink hover:underline font-medium">Learn More</a>
+                        <a href="#nail-category" class="text-blush-pink hover:underline font-medium">View Nail Gallery</a>
                     </div>
                     <!-- Service Card 2: Skincare -->
                     <div class="bg-white p-6 rounded-lg-custom shadow-lg text-center transform hover:scale-105 transition duration-300">
-                        <img src="https://placehold.co/100x100/B76E79/FFF?text=✨" alt="Skincare Services Icon" class="mx-auto mb-4 w-24 h-24 object-contain rounded-full">
+                        <!-- Updated src for new image -->
+                        <img src="9cdf9fc3-1e4f-48b2-b2d3-e6cc6f8fe83f.PNG" alt="Glowing Skincare Services" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full" onerror="this.onerror=null;this.src='https://placehold.co/100x100/B76E79/FFF?text=✨';">
                         <h3 class="text-xl font-semibold text-rose-gold mb-3">Glowing Skincare</h3>
                         <p class="text-gray-600 mb-4">
                             Rejuvenate your skin with our tailored facials and advanced treatments.
                         </p>
-                        <a href="#book-now" class="text-blush-pink hover:underline font-medium">Learn More</a>
+                        <a href="#makeup-category" class="text-blush-pink hover:underline font-medium">View Makeup Gallery</a>
                     </div>
-                    <!-- Service Card 3: Hair Styling -->
+                    <!-- Service Card 3: Hair Styling (now links to Lash Extension) -->
                     <div class="bg-white p-6 rounded-lg-custom shadow-lg text-center transform hover:scale-105 transition duration-300">
-                        <img src="https://placehold.co/100x100/B76E79/FFF?text=💇‍♀️" alt="Hair Services Icon" class="mx-auto mb-4 w-24 h-24 object-contain rounded-full">
+                        <!-- Updated src for new image -->
+                        <img src="be0f36d7-de9d-4bba-a7ab-ff7c9302282f.PNG" alt="Hair Transformations" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full" onerror="this.onerror=null;this.src='https://placehold.co/100x100/B76E79/FFF?text=💇‍♀️';">
                         <h3 class="text-xl font-semibold text-rose-gold mb-3">Hair Transformations</h3>
                         <p class="text-gray-600 mb-4">
                             Expert cuts, vibrant colors, and stunning styles for every occasion.
                         </p>
-                        <a href="#book-now" class="text-blush-pink hover:underline font-medium">Learn More</a>
+                        <a href="#lash-extension-category" class="text-blush-pink hover:underline font-medium">View Lash Gallery</a>
                     </div>
                 </div>
+
+                <!-- Nail Category Section -->
+                <div id="nail-category" class="bg-white p-8 rounded-lg-custom shadow-lg mb-12">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-rose-gold text-center mb-8">Nail Category</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <!-- Nail Image 1 -->
+                        <div class="bg-cream-50 rounded-lg-custom shadow-md overflow-hidden">
+                            <!-- Path adjusted to assume image is in the same directory as index.html -->
+                            <img src="eb8a978b-aa1d-4349-8afd-6ca0cb32189e.png" alt="Elegant Nail Design" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F8D9E3/B76E79?text=Nail+Art+1';">
+                            <div class="p-4 text-center">
+                                <p class="font-semibold text-gray-700">Detailed Nail Art</p>
+                            </div>
+                        </div>
+                        <!-- Nail Image 2 -->
+                        <div class="bg-cream-50 rounded-lg-custom shadow-md overflow-hidden">
+                            <!-- Path adjusted to assume image is in the same directory as index.html -->
+                            <img src="c11d65d1-6cdc-454b-988e-20203c14ded1.PNG" alt="Acrylic Nail Extension" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/B76E79/FFFDF9?text=Nail+Art+2';">
+                            <div class="p-4 text-center">
+                                <p class="font-semibold text-gray-700">Acrylic Extensions</p>
+                            </div>
+                        </div>
+                        <!-- Nail Image 3 -->
+                        <div class="bg-cream-50 rounded-lg-custom shadow-md overflow-hidden">
+                            <!-- Path adjusted to assume image is in the same directory as index.html -->
+                            <img src="ef266ad9-6371-42d9-b695-274211fdb0fb.PNG" alt="Gel Nail Polish" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFFDF9/B76E79?text=Nail+Art+3';">
+                            <div class="p-4 text-center">
+                                <p class="font-semibold text-gray-700">Glossy Gel Finish</p>
+                            </div>
+                        </div>
+                        <!-- Removed "Creative Designs" placeholder -->
+                    </div>
+                </div>
+
+                <!-- Makeup Category Section -->
+                <div id="makeup-category" class="bg-white p-8 rounded-lg-custom shadow-lg mb-12">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-rose-gold text-center mb-8">Makeup Category</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <!-- Makeup Image 1 -->
+                        <div class="bg-cream-50 rounded-lg-custom shadow-md overflow-hidden">
+                            <!-- Path adjusted to assume image is in the same directory as index.html -->
+                            <img src="d14e68c2-a518-4e2a-9586-d9b803885c7b.PNG" alt="Professional Makeup Application" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F8D9E3/B76E79?text=Makeup+1';">
+                            <div class="p-4 text-center">
+                                <p class="font-semibold text-gray-700">Flawless Finish</p>
+                            </div>
+                        </div>
+                        <!-- Makeup Image 2 (Updated src for new image) -->
+                        <div class="bg-cream-50 rounded-lg-custom shadow-md overflow-hidden">
+                            <img src="9cdf9fc3-1e4f-48b2-b2d3-e6cc6f8fe83f.PNG" alt="Glamour Looks Makeup" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/B76E79/FFFDF9?text=Makeup+2';">
+                            <div class="p-4 text-center">
+                                <p class="font-semibold text-gray-700">Glamour Looks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lash Extension Category Section -->
+                <div id="lash-extension-category" class="bg-white p-8 rounded-lg-custom shadow-lg mb-12">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-rose-gold text-center mb-8">Lash Extension</h3>
+                    <p class="text-gray-600 text-center mb-6">
+                        Enhance your natural beauty with our professional lash extension services. Choose from a variety of styles to achieve your desired look, from subtle enhancement to dramatic volume. Our skilled technicians ensure a comfortable application and stunning, long-lasting results.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <!-- Lash Image 1 (Updated src for new image) -->
+                        <div class="bg-cream-50 rounded-lg-custom shadow-md overflow-hidden">
+                            <img src="be0f36d7-de9d-4bba-a7ab-ff7c9302282f.PNG" alt="Classic Lash Extensions" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F8D9E3/B76E79?text=Lashes+1';">
+                            <div class="p-4 text-center">
+                                <p class="font-semibold text-gray-700">Classic Lashes</p>
+                            </div>
+                        </div>
+                        <!-- Removed Volume and Hybrid Lashes -->
+                    </div>
+                </div>
+
                 <div class="text-center mt-12">
                     <a href="#book-now" class="inline-block bg-rose-gold text-white text-lg px-8 py-4 rounded-full hover:bg-white hover:text-rose-gold transition duration-300 shadow-xl transform hover:scale-105">
-                        View All Services
+                        Book Your Service Now
                     </a>
                 </div>
             </div>
         </section>
+
+        <!-- Removed Gallery Section entirely -->
 
         <!-- Testimonials Section -->
         <section id="testimonials" class="py-16 md:py-24 bg-white container rounded-lg-custom mt-8 shadow-md">
@@ -233,7 +317,7 @@
                 </div>
             </div>
         </section>
-    </main>
+    </div> <!-- End of main content wrapper -->
 
     <!-- Footer Section -->
     <footer id="contact" class="bg-gray-800 text-white py-12 mt-8 rounded-t-lg-custom">
@@ -241,7 +325,7 @@
             <!-- Contact Info -->
             <div>
                 <h3 class="text-xl font-bold text-blush-pink mb-4">Contact Us</h3>
-                <p class="mb-2">Phone: <a href="tel:+27123456789" class="hover:underline">+27 12 345 6789</a></p>
+                <p class="mb-2">Phone: <a href="tel:+27767510586" class="hover:underline">+27 76 751 0586</a></p>
                 <p class="mb-4">Hours: Mon-Sat: 9AM - 6PM</p>
                 <!-- Get Directions Button -->
                 <a href="https://www.google.com/maps?q=-26.565075,29.078259" target="_blank"
@@ -263,24 +347,26 @@
             <div>
                 <h3 class="text-xl font-bold text-blush-pink mb-4">Follow Us</h3>
                 <div class="flex justify-center md:justify-start space-x-4">
-                    <!-- TikTok Icon (updated to image) -->
+                    <!-- TikTok Icon -->
                     <a href="https://www.tiktok.com/@phindy575?_t=ZS-8xh3xDL51HT&_r=1" target="_blank" class="text-white hover:text-blush-pink transition duration-300">
-                        <img src="bf4aee07-b2eb-4252-9158-dcb502a74631-removebg-preview.png" 
-                             alt="TikTok Icon" 
+                        <img src="bf4aee07-b2eb-4252-9158-dcb502a74631-removebg-preview.png"
+                             alt="TikTok Icon"
                              class="w-8 h-8 object-contain"
                              onerror="this.onerror=null;this.src='https://placehold.co/32x32/000/FFF?text=TikTok';" />
                     </a>
-                    <!-- Instagram Icon -->
+                    <!-- Instagram Icon (Updated to image) -->
                     <a href="https://www.instagram.com/95phindypp?igsh=anhlODM0dWk5aTg4" target="_blank" class="text-white hover:text-blush-pink transition duration-300">
-                        <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M12 0C8.78 0 8.35 0 7.03 0C5.7 0 4.67.06 3.75.25C2.81.44 2.12.75 1.52 1.34C.92 1.94.61 2.63.42 3.55C.23 4.47.17 5.5.17 6.83C.17 8.16.17 8.59.17 12C.17 15.34.17 15.77.17 17.1C.17 18.43.23 19.46.42 20.38C.61 21.3.92 21.99 1.52 22.59C2.12 23.19 2.81 23.5 3.75 23.69C4.67 23.88 5.7 23.94 7.03 23.94C8.35 23.94 8.78 23.94 12 23.94C15.34 23.94 15.77 23.94 17.1 23.94C18.43 23.94 19.46 23.88 20.38 23.69C21.3 23.5 21.99 23.19 22.59 22.59C23.19 21.99 23.5 21.3 23.69 20.38C23.88 19.46 23.94 18.43 23.94 17.1C23.94 15.77 23.94 15.34 23.94 12C23.94 8.78 23.94 8.35 23.94 7.03C23.94 5.7.17 4.67.25 3.75C.44 2.81.75 2.12 1.34 1.52C1.94.92 2.63.61 3.55.42C4.47.23 5.5.17 6.83.17C8.16.17 8.59.17 12 .17ZM12 4.1C15.25 4.1 17.9 6.75 17.9 10C17.9 13.25 15.25 15.9 12 15.9C8.75 15.9 6.1 13.25 6.1 10C6.1 6.75 8.75 4.1 12 4.1ZM12 6.5C9.92 6.5 8.25 8.17 8.25 10.25C8.25 12.33 9.92 14 12 14C14.08 14 15.75 12.33 15.75 10.25C15.75 8.17 14.08 6.5 12 6.5ZM19.2 4.5C18.66 4.5 18.23 4.93 18.23 5.47C18.23 6.01 18.66 6.44 19.2 6.44C19.74 6.44 20.17 6.01 20.17 5.47C20.17 4.93 19.74 4.5 19.2 4.5Z" clip-rule="evenodd" />
-                        </svg>
+                        <img src="6dDoc8GV9fYUPExgLYPqqT-removebg-preview (1).png"
+                             alt="Instagram Icon"
+                             class="w-8 h-8 object-contain"
+                             onerror="this.onerror=null;this.src='https://placehold.co/32x32/000/FFF?text=Instagram';" />
                     </a>
-                    <!-- Facebook Icon -->
+                    <!-- Facebook Icon (Updated to image) -->
                     <a href="https://www.facebook.com/share/1EAAXTDfrM/?mibextid=wwXIfr" target="_blank" class="text-white hover:text-blush-pink transition duration-300">
-                        <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M19.5 0h-15C2.016 0 0 2.016 0 4.5v15C0 21.984 2.016 24 4.5 24h7.5V14.625h-3v-3h3V9.375c0-3.15 1.89-4.89 4.74-4.89h2.36v3h-1.5c-1.395 0-1.65 1.045-1.65 1.705v2.295h3.3l-.45 3h-2.85V24H19.5c2.484 0 4.5-2.016 4.5-4.5v-15C24 2.016 21.984 0 19.5 0Z" clip-rule="evenodd" />
-                        </svg>
+                        <img src="facebook-logo-facebook-icon-transparent-free-png-removebg-preview (1).png"
+                             alt="Facebook Icon"
+                             class="w-8 h-8 object-contain"
+                             onerror="this.onerror=null;this.src='https://placehold.co/32x32/000/FFF?text=Facebook';" />
                     </a>
                 </div>
             </div>
